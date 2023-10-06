@@ -1,4 +1,4 @@
-import { useState,useEffect} from "react";
+import { useState } from "react";
 import "./portfolio.scss";
 import Portfoliolist from "../portfolio-list/Portfoliolist";
 
@@ -7,30 +7,25 @@ export default function Portfolio() {
   const list=[
     {
       id:"repositories",
-      title:"Repositories"
+      title:"Repositories",
+      link:"https://github.com/RANJEETJ06?tab=repositories"
     },
     {
       id:"system",
-      title:"System-App"
+      title:"System-App",
+      link:"https://github.com/RANJEETJ06/Quiz"
     },
     {
       id:"python",
-      title:"Python-Projects"
+      title:"Python-Projects",
+      link:"https://github.com/RANJEETJ06/PythonProjects"
     },
     {
       id:"web",
-      title:"Web-Site"
+      title:"Web-Site",
+      link:"https://github.com/RANJEETJ06/Animation"
     }
   ];
-  useEffect(()=>{
-    switch(selected){
-      case "repositories":
-        console.log("hello")
-        break;
-      default:
-        console.log("hello")
-    }
-  },[selected]);
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
@@ -40,7 +35,8 @@ export default function Portfolio() {
           title={item.title} 
           active={selected === item.id}
           setSelected={setSelected} 
-          id={item.id}/>
+          id={item.id}
+          link={item.link}/>
         ))}
       </ul>
       <div className="container">
