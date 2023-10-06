@@ -1,11 +1,9 @@
 import { useState,useEffect} from "react";
-import { useNavigate } from "react-router-dom";
 import "./portfolio.scss";
 import Portfoliolist from "../portfolio-list/Portfoliolist";
 
 export default function Portfolio() {
   const[selected,setSelected]=useState("");
-  let navigate=useNavigate();
   const list=[
     {
       id:"repositories",
@@ -27,12 +25,12 @@ export default function Portfolio() {
   useEffect(()=>{
     switch(selected){
       case "repositories":
-        navigate("www.youtube.com");
+        console.log("hello")
         break;
       default:
-        navigate(`www.youtube.com`);
+        console.log("hello")
     }
-  },[selected,navigate])
+  },[selected]);
   return (
     <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
