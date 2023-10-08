@@ -14,7 +14,7 @@ export default function Works() {
       {
         id:"2",
         icon:"assets/mobile.png",
-        title:"Mobile Application",
+        title:"Mobile",
         desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ametut necessitatibus cum.Animi, praesentium quasi! Dolores eosullam sequi sapiente",
         img:"https://www.volumetree.com/wp-content/uploads/2019/11/App-development-process-Feature-image.jpg"
       },
@@ -40,7 +40,7 @@ export default function Works() {
           <div className="left">
             <div className="leftContainer">
               <div className="imgContainer">
-                <img src={d.icon} alt="#img" />
+                <img src={d.icon} alt="img" />
               </div>
               <h2>{d.title}</h2>
               <p>

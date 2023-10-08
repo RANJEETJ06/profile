@@ -3,6 +3,12 @@
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $mainColor),
     color-stop(100%, $white));
     display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .left{
         flex: 0.5;
         .imageContainer{
@@ -14,8 +20,16 @@
             align-items: flex-end;
             justify-content: center;
 
+            @include mobile{
+                align-items: flex-start;
+            }
+
             img{
                 height: 80%;
+
+                @include mobile{
+                    height: 70%;
+                }
             }
         }
     }
@@ -31,6 +45,10 @@
             flex-direction: column;
             justify-content: center;
 
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+            }
             h1{
                 font-size: 60px;
                 margin: 10px 0;

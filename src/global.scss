@@ -4,3 +4,11 @@ $white:rgb(255,255,255);
 $crimson:crimson;
 $lightCoral:rgb(215, 153, 130);
 $light:rgba(225, 225, 211, 0.689);
+
+$width: 768px;
+
+@mixin mobile {
+    @media(max-width:#{$width}){
+        @content
+    }
+}
