@@ -82,6 +82,10 @@
                         display: flex;
                         align-items: center ;
                         height: 60px;
+                        justify-content: center;
+                        &:hover{
+                            font-size: 21px;
+                        }
                     }
                 }
             }
