@@ -50,6 +50,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include mobile{
+                    overflow: hidden;
+                }
 
                 img{
                     margin: 0px 30px;
@@ -68,6 +71,7 @@
                 @include mobile{
                     font-size: 12px;
                     padding: 6px;
+                    overflow: hidden;
                 }
             }
             .bottom{

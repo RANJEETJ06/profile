@@ -30,6 +30,10 @@
             padding: 7px;
             border-radius: 5px;
             cursor: pointer;
+            @include mobile{
+                margin-top: 7px;
+                margin-bottom: 2px;
+            }
             &.active{
                 background-color: $mainColor;
                 color: $c;
