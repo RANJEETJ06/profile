@@ -14,9 +14,18 @@
     justify-content: center;
     transition: all 1s ease;
 
+    @include mobile{
+        right: -100%;
+        width: 100%;
+        transition: all 2s ease;
+    }
+
     &.active{
         right: 0;
         transition: all 1s ease;
+        @include mobile{
+            transition: all 2s ease;
+        }
     }
 
     ul{
@@ -29,6 +38,11 @@
 
         li {
             margin-bottom: 25px;
+            @include mobile{
+                height: 40px;
+                width: 200px;
+                transition: all 1s ease;
+            }
             a{
                 text-decoration: none;
                 font-size: inherit;
@@ -39,6 +53,9 @@
 
             &:hover{
                 font-weight: 800;
+                @include mobile{
+                    font-size: 30px;
+                }
             }
         }
     }
