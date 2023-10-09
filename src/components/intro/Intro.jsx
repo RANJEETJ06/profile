@@ -11,7 +11,7 @@ export default function Intro() {
       backSpeed:60,
       strings: ["Developer","Java","Python","Typescript","Javascript","ML"], 
     });
-  });
+  },[]);
   return (
     <div className='intro' id="intro">
       <div className="left">
