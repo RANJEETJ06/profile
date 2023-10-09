@@ -75,6 +75,11 @@
                         flex-direction: column;
                         justify-content: space-between;
                         align-items: center;
+
+                        @include mobile{
+                            overflow: hidden;
+                        }
+
                         .imgContainer{
                             height: 40px;
                             width: 40px;
@@ -94,13 +99,15 @@
                         h2{
                             font-size: 20px;
                             @include mobile{
-                                font-size: 12px;
+                                font-size: 13px;
+                                overflow: hidden;
                             }
                         }
                         p{
                             font-size: 13px;
                             @include mobile{
                                 font-size: 7px;
+                                overflow: hidden;
                             }
                         }
                         span{
