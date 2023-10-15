@@ -18,13 +18,14 @@
         right: -100%;
         width: 100%;
         transition: all 2s ease;
+        opacity: 95%;
     }
 
     &.active{
         right: 0;
         transition: all 1s ease;
         @include mobile{
-            transition: all 2s ease;
+            transition: all 1s ease;
         }
     }
 
