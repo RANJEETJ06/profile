@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const baseUrl = process.env.PROXY_URL;
+
 export default axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: baseUrl,
     headers: {
         'ngrok-skip-browser-warning': 'true'
     }
