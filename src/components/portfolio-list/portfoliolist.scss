@@ -1,22 +1,22 @@
 @import "../../global.scss";
 
-.portfolioList{
-    font-size: 14px;
-    margin-right: 50px;
-    padding: 7px;
-    border-radius: 5px;
-    cursor: pointer;
-    &.active{
-        background-color: $mainColor;
-        color: $c;
-    }
-    &:hover{
-        background-color: $mainColor;
-        color: $c;
-        transition: all 0.5s ease;
-    }
-    a{
-        text-decoration: none;
-        color: inherit;
-    }
+.portfolioList {
+  font-size: 14px;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  &.active {
+    background-color: $mainColor;
+    color: $c;
+  }
+  &:hover {
+    background-color: $mainColor;
+    color: $c;
+    transition: all 0.5s ease;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

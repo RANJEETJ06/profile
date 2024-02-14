@@ -1,14 +1,15 @@
 $mainColor: #15023a;
 $c: antiquewhite;
-$white:rgb(255,255,255);
-$crimson:crimson;
-$lightCoral:rgb(215, 153, 130);
-$light:rgba(225, 225, 211, 0.689);
+$white: rgb(255, 255, 255);
+$crimson: crimson;
+$lightCoral: rgb(215, 153, 130);
+$light: rgba(225, 225, 211, 0.689);
+$lightMain: #5b2bbd;
 
 $width: 768px;
 
 @mixin mobile {
-    @media(max-width:#{$width}){
-        @content
-    }
+  @media (max-width:#{$width}) {
+    @content;
+  }
 }

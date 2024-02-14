@@ -1,64 +1,63 @@
 @import "../../global.scss";
 
-.menu{
-    width: 300px;
-    height: 100vh;
-    background-color: $c;
-    position: fixed;
-    top: 60px;
-    right: -300px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.menu {
+  width: 300px;
+  height: 100vh;
+  background-color: $c;
+  position: fixed;
+  top: 60px;
+  right: -300px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+
+  @include mobile {
+    right: -100%;
+    width: 100%;
+    transition: all 2s ease;
+    opacity: 95%;
+  }
+
+  &.active {
+    right: 0;
     transition: all 1s ease;
-
-    @include mobile{
-        right: -100%;
-        width: 100%;
-        transition: all 2s ease;
-        opacity: 95%;
+    @include mobile {
+      transition: all 1s ease;
     }
+  }
 
-    &.active{
-        right: 0;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 25px;
+    font-weight: 300;
+    color: $mainColor;
+
+    li {
+      margin-bottom: 25px;
+      @include mobile {
+        height: 40px;
+        width: 200px;
         transition: all 1s ease;
-        @include mobile{
-            transition: all 1s ease;
+      }
+      a {
+        text-decoration: none;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        width: 60%;
+      }
+
+      &:hover {
+        font-weight: 800;
+        @include mobile {
+          font-size: 30px;
         }
+      }
     }
-
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-size: 25px;
-        font-weight: 300;
-        color: $mainColor;
-
-        li {
-            margin-bottom: 25px;
-            @include mobile{
-                height: 40px;
-                width: 200px;
-                transition: all 1s ease;
-            }
-            a{
-                text-decoration: none;
-                font-size: inherit;
-                font-weight: inherit;
-                color: inherit;
-                width:60%;
-            }
-
-            &:hover{
-                font-weight: 800;
-                @include mobile{
-                    font-size: 30px;
-                }
-            }
-        }
-    }
+  }
 }
-
