@@ -1,21 +1,24 @@
 import { useState } from "react";
 import "./contact.scss";
 import shake from "../../assets/shake.svg";
-import api from "../../axiosConfig";
+import axios from "axios";
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
   const [email, setEmail] = useState("");
   const [messageText, setMessageText] = useState("");
+  const [emailValid, setEmailValid] = useState(true);
+  const baseUrl = process.env.REACT_APP_URL;
 
-  const handleSumit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!emailValid) return;
     try {
-      const response = await api.post("/api/v1/", {
+      const response = await axios.post(`${baseUrl}/api/v1/`, {
         email: email,
         para: messageText,
       });
-      if (response.status===201) {
+      if (response.status === 201) {
         setMessage(true);
         setEmail("");
         setMessageText("");
@@ -26,6 +29,12 @@ export default function Contact() {
       console.error("Network error:", error);
     }
   };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailValid(e.target.validity.valid);
+  };
+
   return (
     <div className="contact" id="contact">
       <div className="left">
@@ -33,20 +42,24 @@ export default function Contact() {
       </div>
       <div className="right">
         <h2>Contact.</h2>
-        <form onSubmit={handleSumit}>
+        <form onSubmit={handleSubmit}>
+         {emailValid ? null :  <span className="invalid">Invalid Email*</span>}
           <input
-            type="text"
+            type="email"
             placeholder="Email..."
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleEmailChange}
+            style={{ borderColor: emailValid ? "initial" : "red" }}
+            required
           />
           <textarea
             placeholder="Message..."
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
+            required
           ></textarea>
           <button type="submit">Send</button>
-          {message && <span>Thanks,i will replay Soon.. ;)</span>}
+          {message && <span>Thanks, I will reply soon! ;)</span>}
         </form>
         <div className="footer">
           <>© 2024 Ranjeet. All Rights Reserved.</>
