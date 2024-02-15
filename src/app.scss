@@ -13,14 +13,14 @@
       width: 8px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: #333; /* Thumb color */
-      border-radius: 4px; /* Rounded corners for the thumb */
+      background-color: #333;
+      border-radius: 4px; 
     }
     &::-webkit-scrollbar-thumb:hover {
-      background-color: #555; /* Thumb color on hover */
+      background-color: #555;
     }
     &::-webkit-scrollbar-track {
-      background-color: inherit; /* Track color */
+      background-color: inherit; 
     }
     > * {
       width: 100vw;

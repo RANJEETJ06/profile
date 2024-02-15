@@ -8,13 +8,12 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [messageText, setMessageText] = useState("");
   const [emailValid, setEmailValid] = useState(true);
-  const baseUrl = process.env.REACT_APP_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!emailValid) return;
     try {
-      const response = await axios.post(`${baseUrl}/api/v1/`, {
+      const response = await axios.post(`${process.env.REACT_APP_URL}/api/v1/`, {
         email: email,
         para: messageText,
       });
