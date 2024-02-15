@@ -43,7 +43,7 @@ export default function Contact() {
       <div className="right">
         <h2>Contact.</h2>
         <form onSubmit={handleSubmit}>
-         {emailValid ? null :  <span className="invalid">Invalid Email*</span>}
+          {emailValid ? null : <span className="invalid">Invalid Email*</span>}
           <input
             type="email"
             placeholder="Email..."
