@@ -20,6 +20,7 @@ function App() {
         <Works />
         <About />
         <Contact />
+        {console.log("Hello")}
       </div>
     </div>
   );
